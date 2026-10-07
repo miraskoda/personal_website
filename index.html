@@ -707,6 +707,92 @@
       color: var(--text-muted);
     }
 
+    /* ===== PROJECTS ===== */
+    .project-group + .project-group {
+      margin-top: 3.5rem;
+    }
+
+    .project-group-title {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+    }
+
+    .project-group-count {
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 400;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: inherit;
+      text-decoration: none;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .project-card:focus-visible {
+      outline: 2px solid var(--accent-light);
+      outline-offset: 3px;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: contain;
+      background: #fff;
+    }
+
+    .project-card-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.9rem 1rem 0.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .project-card-description {
+      padding: 0 1rem 1rem;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      line-height: 1.55;
+    }
+
+    .project-card-arrow {
+      color: var(--accent-light);
+      font-size: 1.1rem;
+      transition: transform var(--transition);
+    }
+
+    .project-card:hover .project-card-arrow {
+      transform: translate(2px, -2px);
+    }
+
     /* ===== EDUCATION ===== */
     .edu-grid {
       display: grid;
@@ -991,6 +1077,10 @@
       .edu-grid {
         grid-template-columns: 1fr;
       }
+
+      .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 768px) {
@@ -1020,6 +1110,16 @@
         padding: 3.5rem 1.25rem;
       }
 
+      .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .project-card-caption {
+        padding: 0.75rem;
+        font-size: 0.82rem;
+      }
+
       .hero {
         min-height: 85vh;
         padding-top: 5rem;
@@ -1037,6 +1137,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#certifications">Certs</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1403,8 +1504,105 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section class="section" id="projects" style="background: var(--bg-secondary);">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-label">// selected work</div>
+        <h2 class="section-title">Projects I've Helped Build</h2>
+      </div>
+
+      <div class="project-group reveal">
+        <h3 class="project-group-title">Mobile applications <span class="project-group-count">09</span></h3>
+        <div class="project-grid">
+          <a class="project-card" href="https://www.appbrain.com/appstore/ezop-fables/ios-6717594152" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-aesop.png" alt="Aesop's Tales app preview" loading="lazy" />
+            <span class="project-card-caption">Aesop's Tales <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">An educational app bringing Aesop's fables to life with on-device AI.</span>
+          </a>
+          <a class="project-card" href="https://www.aktia.cz/chlazeni" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-aktia.png" alt="Aktia International app preview" loading="lazy" />
+            <span class="project-card-caption">Aktia International <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A refrigeration equipment management proof of concept with hardware diagnostics.</span>
+          </a>
+          <a class="project-card" href="https://coinmerce.io/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-coinmerce.png" alt="Coinmerce app preview" loading="lazy" />
+            <span class="project-card-caption">Coinmerce <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A crypto trading app supported by automated releases and visual testing.</span>
+          </a>
+          <a class="project-card" href="https://doktoronline.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-do.png" alt="Doktor Online app preview" loading="lazy" />
+            <span class="project-card-caption">Doktor Online <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A telemedicine app connecting patients with doctors for remote consultations.</span>
+          </a>
+          <a class="project-card" href="https://www.homecredit.net/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-homecredit.png" alt="Home Credit mobile banking app preview" loading="lazy" />
+            <span class="project-card-caption">Home Credit <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A mobile banking app serving more than 20 million active users.</span>
+          </a>
+          <a class="project-card" href="https://www.lekarna.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-lekarna.png" alt="Lekarna.cz app preview" loading="lazy" />
+            <span class="project-card-caption">Lekarna.cz <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A shopping app for one of the Czech Republic's major online pharmacies.</span>
+          </a>
+          <a class="project-card" href="https://recruitis.io/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-recruitis.png" alt="Recruitis app preview" loading="lazy" />
+            <span class="project-card-caption">Recruitis <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A recruiting platform helping teams manage their hiring process.</span>
+          </a>
+          <a class="project-card" href="https://studentgate.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-studentgate.png" alt="StudentGate app preview" loading="lazy" />
+            <span class="project-card-caption">StudentGate <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A learning app built around flashcards and study practice.</span>
+          </a>
+          <a class="project-card" href="https://www.elredo.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/web_asset_web_elredo-500w.png" alt="Elredo mobile app preview" loading="lazy" />
+            <span class="project-card-caption">Elredo <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">An audiobook app with personalized picks and tools for building reading habits.</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-group reveal">
+        <h3 class="project-group-title">Websites <span class="project-group-count">06</span></h3>
+        <div class="project-grid">
+          <a class="project-card" href="https://onlineatrakce.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-web-atrakce.png" alt="OnlineAtrakce booking website preview" loading="lazy" />
+            <span class="project-card-caption">OnlineAtrakce <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A custom booking platform for renting attractions for events and celebrations.</span>
+          </a>
+          <a class="project-card" href="https://pilacutter.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-web-cutter.png" alt="Pásová pila website preview" loading="lazy" />
+            <span class="project-card-caption">Pásová pila <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A product website for bandsaws and cutting equipment.</span>
+          </a>
+          <a class="project-card" href="https://dottydogs.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-web-dd.png" alt="Dotty Dogs website preview" loading="lazy" />
+            <span class="project-card-caption">Dotty Dogs <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A website for an English Springer Spaniel kennel.</span>
+          </a>
+          <a class="project-card" href="https://gpl-cz.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-web-gpl.png" alt="GPLCZ website preview" loading="lazy" />
+            <span class="project-card-caption">GPLCZ <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A business website built for GPLCZ.</span>
+          </a>
+          <a class="project-card" href="https://www.automyckahk.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-web-mycka.png" alt="Automyčka HK website preview" loading="lazy" />
+            <span class="project-card-caption">Automyčka HK <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A website for a local car wash in Hradec Králové.</span>
+          </a>
+          <a class="project-card" href="https://www.autoservis-hradec-kralove.cz/" target="_blank" rel="noopener noreferrer">
+            <img class="project-image" src="assets/miroslavskoda.cz_web_assets_apps-web-trumf.png" alt="TRUMF Autoservis website preview" loading="lazy" />
+            <span class="project-card-caption">TRUMF Autoservis <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-description">A website for an automotive service and repair shop.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- EDUCATION -->
-  <section class="section" id="education" style="background: var(--bg-secondary);">
+  <section class="section" id="education">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-label">// education</div>
@@ -1436,7 +1634,7 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section class="section" id="certifications">
+  <section class="section" id="certifications" style="background: var(--bg-secondary);">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-label">// credentials</div>
@@ -1474,7 +1672,7 @@
   </section>
 
   <!-- LANGUAGES -->
-  <section class="section" style="background: var(--bg-secondary);">
+  <section class="section">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-label">// languages</div>
@@ -1510,7 +1708,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
+  <section class="section" id="contact" style="background: var(--bg-secondary);">
     <div class="section-inner">
       <div class="cta-box reveal">
         <div class="cta-content">
