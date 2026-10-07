@@ -776,6 +776,14 @@
       font-weight: 600;
     }
 
+    .project-card-tech {
+      padding: 0 1rem 0.35rem;
+      color: var(--accent-light);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      line-height: 1.45;
+    }
+
     .project-card-description {
       padding: 0 1rem 1rem;
       color: var(--text-secondary);
@@ -1116,8 +1124,12 @@
       }
 
       .project-card-caption {
-        padding: 0.75rem;
+        padding: 0.75rem 0.75rem 0.2rem;
         font-size: 0.82rem;
+      }
+
+      .project-card-tech {
+        padding: 0 0.75rem 0.35rem;
       }
 
       .hero {
@@ -1509,7 +1521,7 @@
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-label">// selected work</div>
-        <h2 class="section-title">Projects I've Helped Build</h2>
+        <h2 class="section-title">Project Showcase</h2>
       </div>
 
       <div class="project-group reveal">
@@ -1518,46 +1530,55 @@
           <a class="project-card" href="https://www.appbrain.com/appstore/ezop-fables/ios-6717594152" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-aesop.png" alt="Aesop's Tales app preview" loading="lazy" />
             <span class="project-card-caption">Aesop's Tales <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter &middot; Swift &middot; Kotlin</span>
             <span class="project-card-description">An educational app bringing Aesop's fables to life with on-device AI.</span>
           </a>
           <a class="project-card" href="https://www.aktia.cz/chlazeni" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-aktia.png" alt="Aktia International app preview" loading="lazy" />
             <span class="project-card-caption">Aktia International <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter &middot; Hardware integration</span>
             <span class="project-card-description">A refrigeration equipment management proof of concept with hardware diagnostics.</span>
           </a>
           <a class="project-card" href="https://coinmerce.io/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-coinmerce.png" alt="Coinmerce app preview" loading="lazy" />
             <span class="project-card-caption">Coinmerce <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter &middot; Dart &middot; GitHub Actions</span>
             <span class="project-card-description">A crypto trading app supported by automated releases and visual testing.</span>
           </a>
           <a class="project-card" href="https://doktoronline.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-do.png" alt="Doktor Online app preview" loading="lazy" />
             <span class="project-card-caption">Doktor Online <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A telemedicine app connecting patients with doctors for remote consultations.</span>
           </a>
           <a class="project-card" href="https://www.homecredit.net/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-homecredit.png" alt="Home Credit mobile banking app preview" loading="lazy" />
             <span class="project-card-caption">Home Credit <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter &middot; Bloc &middot; Swift &middot; Kotlin</span>
             <span class="project-card-description">A mobile banking app serving more than 20 million active users.</span>
           </a>
           <a class="project-card" href="https://www.lekarna.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-lekarna.png" alt="Lekarna.cz app preview" loading="lazy" />
             <span class="project-card-caption">Lekarna.cz <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A shopping app for one of the Czech Republic's major online pharmacies.</span>
           </a>
           <a class="project-card" href="https://recruitis.io/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-recruitis.png" alt="Recruitis app preview" loading="lazy" />
             <span class="project-card-caption">Recruitis <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A recruiting platform helping teams manage their hiring process.</span>
           </a>
           <a class="project-card" href="https://studentgate.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-studentgate.png" alt="StudentGate app preview" loading="lazy" />
             <span class="project-card-caption">StudentGate <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A learning app built around flashcards and study practice.</span>
           </a>
           <a class="project-card" href="https://www.elredo.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/web_asset_web_elredo-500w.png" alt="Elredo mobile app preview" loading="lazy" />
             <span class="project-card-caption">Elredo <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">iOS &middot; Android</span>
             <span class="project-card-description">An audiobook app with personalized picks and tools for building reading habits.</span>
           </a>
         </div>
@@ -1569,31 +1590,37 @@
           <a class="project-card" href="https://onlineatrakce.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-atrakce.png" alt="OnlineAtrakce booking website preview" loading="lazy" />
             <span class="project-card-caption">OnlineAtrakce <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript &middot; PHP &middot; MySQL</span>
             <span class="project-card-description">A custom booking platform for renting attractions for events and celebrations.</span>
           </a>
           <a class="project-card" href="https://pilacutter.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-cutter.png" alt="Pásová pila website preview" loading="lazy" />
             <span class="project-card-caption">Pásová pila <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A product website for bandsaws and cutting equipment.</span>
           </a>
           <a class="project-card" href="https://dottydogs.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-dd.png" alt="Dotty Dogs website preview" loading="lazy" />
             <span class="project-card-caption">Dotty Dogs <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A website for an English Springer Spaniel kennel.</span>
           </a>
           <a class="project-card" href="https://gpl-cz.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-gpl.png" alt="GPLCZ website preview" loading="lazy" />
             <span class="project-card-caption">GPLCZ <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A business website built for GPLCZ.</span>
           </a>
           <a class="project-card" href="https://www.automyckahk.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-mycka.png" alt="Automyčka HK website preview" loading="lazy" />
             <span class="project-card-caption">Automyčka HK <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A website for a local car wash in Hradec Králové.</span>
           </a>
           <a class="project-card" href="https://www.autoservis-hradec-kralove.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-trumf.png" alt="TRUMF Autoservis website preview" loading="lazy" />
             <span class="project-card-caption">TRUMF Autoservis <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+            <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A website for an automotive service and repair shop.</span>
           </a>
         </div>
