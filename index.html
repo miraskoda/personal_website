@@ -330,7 +330,7 @@
       overflow: hidden;
       box-shadow: var(--shadow), var(--shadow-glow);
       width: 100%;
-      max-width: 480px;
+      max-width: 700px;
     }
 
     .code-titlebar {
@@ -1327,15 +1327,20 @@
             <div>&nbsp;&nbsp;<span class="keyword">final</span> experience = <span class="number">6</span>; <span
                 class="comment">// years</span></div>
             <div>&nbsp;&nbsp;</div>
-            <div>&nbsp;&nbsp;<span class="keyword">List</span>&lt;<span class="class-name">String</span>&gt; <span
-                class="prop">skills</span> = [</div>
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Flutter"</span>, <span class="string">"TypeScript"</span>,
+            <div>&nbsp;&nbsp;<span class="keyword">final</span> Map&lt;<span class="class-name">String</span>, List&lt;<span class="class-name">String</span>&gt;&gt; <span class="prop">skills</span> = {</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Core"</span>: [<span class="string">"Flutter"</span>, <span class="string">"Dart"</span>, <span class="string">"TypeScript"</span>, <span class="string">"PHP"</span>],
             </div>
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Swift"</span>, <span class="string">"Kotlin"</span>,
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"State Management"</span>: [<span class="string">"Bloc"</span>, <span class="string">"Riverpod"</span>, <span class="string">"GetX"</span>],
             </div>
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"CI/CD"</span>, <span class="string">"UI Quality"</span>,
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Architecture"</span>: [<span class="string">"Clean Architecture"</span>, <span class="string">"TDD"</span>, <span class="string">"Golden Tests"</span>],
             </div>
-            <div>&nbsp;&nbsp;];</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Native &amp; Platform"</span>: [<span class="string">"Swift"</span>, <span class="string">"Kotlin"</span>, <span class="string">"Native Bridges"</span>],
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Infrastructure"</span>: [<span class="string">"CI/CD"</span>, <span class="string">"Firebase"</span>, <span class="string">"App Store Delivery"</span>],
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Specialized"</span>: [<span class="string">"Performance"</span>, <span class="string">"On-device AI"</span>, <span class="string">"UI Quality"</span>],
+            </div>
+            <div>&nbsp;&nbsp;};</div>
             <div>&nbsp;&nbsp;</div>
             <div>&nbsp;&nbsp;<span class="keyword">bool</span> <span class="prop">isHireable</span>() =&gt; <span
                 class="keyword">true</span>;</div>
