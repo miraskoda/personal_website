@@ -775,12 +775,100 @@
       line-height: 1.3;
     }
 
+    .project-card-tech-note {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      z-index: 2;
+      max-width: calc(100% - 1.5rem);
+      padding: 0.55rem 0.7rem;
+      border: 1px solid var(--border-hover);
+      border-radius: 6px;
+      background: rgba(10, 10, 15, 0.96);
+      box-shadow: var(--shadow);
+      color: var(--text-primary);
+      font-size: 0.72rem;
+      line-height: 1.45;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-4px);
+      transition: opacity var(--transition), transform var(--transition);
+    }
+
+    .project-card:hover .project-card-tech-note,
+    .project-card:focus-visible .project-card-tech-note {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .project-image {
       display: block;
       width: 100%;
       aspect-ratio: 16 / 10;
       object-fit: contain;
       background: #fff;
+    }
+
+    .oss-card-image {
+      display: grid;
+      place-items: center;
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #111827, #1e293b);
+    }
+
+    .oss-card-image.auto-text {
+      background: linear-gradient(135deg, #101827, #173f8a);
+    }
+
+    .oss-card-image.thumbnail-slider {
+      background: linear-gradient(135deg, #111827, #1d4ed8);
+    }
+
+    .oss-card-image.chameleon {
+      background: linear-gradient(135deg, #10251d, #276749);
+    }
+
+    .oss-card-image.alice-graphql {
+      background: linear-gradient(135deg, #10202d, #0369a1);
+    }
+
+    .oss-card-mark {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .oss-project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .oss-project-card {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .oss-project-card .project-card-caption {
+      padding: 0 0 0.2rem;
+    }
+
+    .oss-project-card .project-card-tech {
+      display: block;
+      padding: 0 0 0.35rem;
+    }
+
+    .oss-project-card .project-card-description {
+      display: block;
+      padding: 0;
     }
 
     .project-card-caption {
@@ -1149,6 +1237,15 @@
         padding: 0 0.75rem 0.35rem;
       }
 
+      .project-card-tech-note {
+        position: static;
+        max-width: none;
+        margin: 0.75rem 0.75rem 0;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+      }
+
       .hero {
         min-height: 85vh;
         padding-top: 5rem;
@@ -1258,38 +1355,36 @@
             Client-side Engineer with<br />End-to-end Ownership
           </h2>
           <p>
-            Senior client-side engineer with <strong>6+ years</strong> across web
-            (HTML, CSS, JavaScript, PHP) and mobile (Flutter, Swift, Kotlin). Started as a
-            freelance web developer building business sites and a custom PHP booking CMS,
-            then shipped production apps used by tens of millions of users.
+            I am a mobile and front-end engineer with <strong>6+ years</strong> of experience, specializing in Flutter, Web, and native mobile integrations. Having built production apps for over 20 million users, I know that great software requires a mix of technical excellence, absolute responsibility, and a refusal to back down from hard problems.
           </p>
-          <p>
-            Strong on <strong>UI quality</strong>, ownership, and modernising how teams
-            deliver software — from GitHub Actions pipelines to golden tests and native bridges.
-          </p>
+          <div class="about-values" style="margin-bottom: 2rem; display: grid; gap: 1.25rem;">
+            <div class="value-item">
+              <strong style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">End-to-End Ownership</strong>
+              <p style="font-size: 0.95rem; margin: 0;">I take features from design hand-offs to stable store deployments, completely owning the outcomes and architectural scalability.</p>
+            </div>
+            <div class="value-item">
+              <strong style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Unrelenting Grit</strong>
+              <p style="font-size: 0.95rem; margin: 0;">I do not give up. Whether debugging a complex native bridge or modernizing a massive legacy codebase, I see challenges through to the end.</p>
+            </div>
+            <div class="value-item">
+              <strong style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Continuous Learner</strong>
+              <p style="font-size: 0.95rem; margin: 0;">The tech landscape moves fast, and I move with it. I actively seek out new knowledge, from implementing on-device generative AI to studying Dutch at the university level.</p>
+            </div>
+            <div class="value-item">
+              <strong style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Purpose-Driven</strong>
+              <p style="font-size: 0.95rem; margin: 0;">I put my best work into products I truly believe in, always looking beyond the technical implementation to guarantee an exceptional user experience.</p>
+            </div>
+            <div class="value-item">
+              <strong style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; display: block; margin-bottom: 0.25rem;">Mentorship &amp; Guidance</strong>
+              <p style="font-size: 0.95rem; margin: 0;">I step up to take responsibility for the team's collective success. I guide architectural decisions, set high engineering standards, and mentor others by showing rather than just telling.</p>
+            </div>
+          </div>
           <p>
             Based in Huizen, I work well hybrid and I'm studying Dutch part-time at the
             Universiteit van Amsterdam. Verified publisher &amp; OSS contributor on pub.dev.
           </p>
-          <div class="about-highlights">
-            <div class="highlight-card">
-              <div class="highlight-number">6+</div>
-              <div class="highlight-label">Years Experience</div>
-            </div>
-            <div class="highlight-card">
-              <div class="highlight-number">20M+</div>
-              <div class="highlight-label">App Users (HC)</div>
-            </div>
-            <div class="highlight-card">
-              <div class="highlight-number">300+</div>
-              <div class="highlight-label">Packages Managed</div>
-            </div>
-            <div class="highlight-card">
-              <div class="highlight-number">B2</div>
-              <div class="highlight-label">Dutch Target</div>
-            </div>
-          </div>
         </div>
+
         <div class="about-tech-grid">
           <div class="tech-group">
             <div class="tech-group-label">Web Front-end</div>
@@ -1329,6 +1424,25 @@
               <span class="tech-tag">Firebase</span>
               <span class="tech-tag">Alchemist</span>
               <span class="tech-tag">Unit Testing</span>
+            </div>
+          </div>
+
+          <div class="about-highlights" style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="highlight-card">
+              <div class="highlight-number">6+</div>
+              <div class="highlight-label">Years Experience</div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-number">20M+</div>
+              <div class="highlight-label">App Users (HC)</div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-number">300+</div>
+              <div class="highlight-label">Packages Managed</div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-number">B2</div>
+              <div class="highlight-label">Dutch Target</div>
             </div>
           </div>
         </div>
@@ -1550,6 +1664,7 @@
             <span class="project-card-caption">Home Credit <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">Flutter &middot; Bloc &middot; Swift &middot; Kotlin</span>
             <span class="project-card-description">A mobile banking app serving more than 20 million active users.</span>
+            <span class="project-card-tech-note">Bloc BLoC pattern &middot; Device Fingerprinting &middot; Root Detection &middot; SMS/Contact parsing &middot; Geofencing &middot; Biometric Auth &middot; Payment SDK bridges &middot; Scalable Monorepo architecture</span>
           </a>
           <a class="project-card" href="https://www.lekarna.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-lekarna.png" alt="Lekarna.cz app preview" loading="lazy" />
@@ -1557,6 +1672,7 @@
             <span class="project-card-caption">Lekarna.cz <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A shopping app for one of the Czech Republic's major online pharmacies.</span>
+            <span class="project-card-tech-note">GetX state management &middot; Dio API client &middot; Complex e-commerce checkout flow &middot; Local search caching &middot; Pharmacy API integration</span>
           </a>
           <a class="project-card" href="https://coinmerce.io/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-coinmerce.png" alt="Coinmerce app preview" loading="lazy" />
@@ -1564,13 +1680,15 @@
             <span class="project-card-caption">Coinmerce <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">Flutter &middot; Dart &middot; GitHub Actions</span>
             <span class="project-card-description">A crypto trading app supported by automated releases and visual testing.</span>
+            <span class="project-card-tech-note">Bloc state management &middot; Alchemist golden tests &middot; GitHub Actions CI/CD &middot; Real-time WebSocket tickers &middot; Web3Auth blockchain integration &middot; Pigeon native bridges &middot; Secure Wallet integration</span>
           </a>
           <a class="project-card" href="https://www.elredo.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/web_asset_web_elredo-500w.png" alt="Elredo mobile app preview" loading="lazy" />
             <span class="project-card-user-badge">50K+ users</span>
             <span class="project-card-caption">Elredo <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
-            <span class="project-card-tech">iOS &middot; Android</span>
+            <span class="project-card-tech">iOS &middot; Android &middot; Flutter</span>
             <span class="project-card-description">An audiobook app with personalized picks and tools for building reading habits.</span>
+            <span class="project-card-tech-note">Native audio engine (Swift/Kotlin) &middot; Flutter for UI layer &middot; Audio streaming optimization &middot; Personalized recommendation engine &middot; Offline playback caching &middot; Background playback service</span>
           </a>
           <a class="project-card" href="https://recruitis.io/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-recruitis.png" alt="Recruitis app preview" loading="lazy" />
@@ -1578,30 +1696,35 @@
             <span class="project-card-caption">Recruitis <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A recruiting platform helping teams manage their hiring process.</span>
+            <span class="project-card-tech-note">GetX state management &middot; Dynamic PDF generation &middot; Role-based access control (RBAC) &middot; ATS pipeline integration</span>
           </a>
           <a class="project-card" href="https://www.appbrain.com/appstore/ezop-fables/ios-6717594152" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-aesop.png" alt="Aesop's Tales app preview" loading="lazy" />
             <span class="project-card-caption">Aesop's Tales <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
-            <span class="project-card-tech">Flutter &middot; Swift &middot; Kotlin</span>
+            <span class="project-card-tech">Swift &middot; Kotlin</span>
             <span class="project-card-description">An educational app bringing Aesop's fables to life with on-device AI.</span>
+            <span class="project-card-tech-note">On-device AI inference &middot; Native Media APIs &middot; Custom GL shaders for visual effects &middot; Hardware-accelerated rendering</span>
           </a>
           <a class="project-card" href="https://www.aktia.cz/chlazeni" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-aktia.png" alt="Aktia International app preview" loading="lazy" />
             <span class="project-card-caption">Aktia International <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">Flutter &middot; Hardware integration</span>
             <span class="project-card-description">A refrigeration equipment management proof of concept with hardware diagnostics.</span>
+            <span class="project-card-tech-note">Serial protocol (RS-232/485) &middot; Bluetooth LE &middot; Real-time hardware telemetry &middot; Modbus TCP/IP communication</span>
           </a>
           <a class="project-card" href="https://doktoronline.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-do.png" alt="Doktor Online app preview" loading="lazy" />
             <span class="project-card-caption">Doktor Online <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A telemedicine app connecting patients with doctors for remote consultations.</span>
+            <span class="project-card-tech-note">Agora RTC Engine &middot; WebRTC video stream &middot; HIPAA-compliant secure vault &middot; Complex appointment scheduling &middot; Encrypted patient records</span>
           </a>
           <a class="project-card" href="https://studentgate.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-studentgate.png" alt="StudentGate app preview" loading="lazy" />
             <span class="project-card-caption">StudentGate <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">Flutter</span>
             <span class="project-card-description">A learning app built around flashcards and study practice.</span>
+            <span class="project-card-tech-note">Local SQLite storage &middot; Spaced-repetition (SRS) algorithm &middot; Study progress tracking &middot; Offline-first synchronization</span>
           </a>
         </div>
       </div>
@@ -1614,36 +1737,92 @@
             <span class="project-card-caption">Automyčka HK <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A website for a local car wash in Hradec Králové.</span>
+            <span class="project-card-tech-note">Responsive CSS Grid &middot; Google Maps API integration &middot; Local SEO optimization</span>
           </a>
           <a class="project-card" href="https://dottydogs.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-dd.png" alt="Dotty Dogs website preview" loading="lazy" />
             <span class="project-card-caption">Dotty Dogs <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A website for an English Springer Spaniel kennel.</span>
+            <span class="project-card-tech-note">WordPress headless content &middot; Image optimization &middot; Custom theme styling</span>
           </a>
           <a class="project-card" href="https://gpl-cz.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-gpl.png" alt="GPLCZ website preview" loading="lazy" />
             <span class="project-card-caption">GPLCZ <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A business website built for GPLCZ.</span>
+            <span class="project-card-tech-note">Custom lightweight CMS &middot; Responsive B2B layout &middot; Form validation</span>
           </a>
           <a class="project-card" href="https://onlineatrakce.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-atrakce.png" alt="OnlineAtrakce booking website preview" loading="lazy" />
             <span class="project-card-caption">OnlineAtrakce <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript &middot; PHP &middot; MySQL</span>
             <span class="project-card-description">A custom booking platform for renting attractions for events and celebrations.</span>
+            <span class="project-card-tech-note">Custom PHP/MySQL Booking Engine &middot; Transactional email system &middot; Date-range conflict logic</span>
           </a>
           <a class="project-card" href="https://pilacutter.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-cutter.png" alt="Pásová pila website preview" loading="lazy" />
             <span class="project-card-caption">Pásová pila <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A product website for bandsaws and cutting equipment.</span>
+            <span class="project-card-tech-note">Structured product catalogue &middot; SEO optimization &middot; Technical specification tables</span>
           </a>
           <a class="project-card" href="https://www.autoservis-hradec-kralove.cz/" target="_blank" rel="noopener noreferrer">
             <img class="project-image" src="assets/apps-web-trumf.png" alt="TRUMF Autoservis website preview" loading="lazy" />
             <span class="project-card-caption">TRUMF Autoservis <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
             <span class="project-card-tech">HTML &middot; CSS &middot; JavaScript</span>
             <span class="project-card-description">A website for an automotive service and repair shop.</span>
+            <span class="project-card-tech-note">Service booking flow &middot; Interactive contact forms &middot; Mobile-first UI</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-group reveal">
+        <h3 class="project-group-title">Open-source work <span class="project-group-count">05</span></h3>
+        <div class="project-grid oss-project-grid">
+          <a class="project-card oss-project-card" href="https://github.com/coinmerce/alchemist" target="_blank" rel="noopener noreferrer">
+            <div class="oss-card-image thumbnail-slider" aria-hidden="true"><span class="oss-card-mark">Al</span></div>
+            <div>
+              <span class="project-card-caption">Alchemist <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="project-card-tech">Flutter &middot; Dart &middot; Golden testing</span>
+              <span class="project-card-description">Improved golden-test image regeneration by adding byte-tolerance handling to prevent visual discrepancies, with supporting tests and documentation updates.</span>
+            </div>
+          </a>
+
+          <a class="project-card oss-project-card" href="https://github.com/miraskoda/Chameleon" target="_blank" rel="noopener noreferrer">
+            <div class="oss-card-image chameleon" aria-hidden="true"><span class="oss-card-mark">Ch</span></div>
+            <div>
+              <span class="project-card-caption">Chameleon <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="project-card-tech">Swift &middot; Apple platforms &middot; GitHub</span>
+              <span class="project-card-description">A lightweight Swift color framework rebuilt for modern Apple platforms, making design tokens simpler to manage.</span>
+            </div>
+          </a>
+
+          <a class="project-card oss-project-card" href="https://pub.dev/packages/auto_text_bouncer" target="_blank" rel="noopener noreferrer">
+            <div class="oss-card-image auto-text" aria-hidden="true"><span class="oss-card-mark">pub</span></div>
+            <div>
+              <span class="project-card-caption">Auto Text Bouncer <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="project-card-tech">Flutter &middot; Dart &middot; pub.dev</span>
+              <span class="project-card-description">A Flutter package for smooth, looping text motion in constrained UI areas, making long labels readable without breaking layout.</span>
+            </div>
+          </a>
+
+          <a class="project-card oss-project-card" href="https://pub.dev/packages/thumbnail_slider" target="_blank" rel="noopener noreferrer">
+            <div class="oss-card-image thumbnail-slider" aria-hidden="true"><span class="oss-card-mark">pub</span></div>
+            <div>
+              <span class="project-card-caption">Thumbnail Slider <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="project-card-tech">Flutter &middot; Dart &middot; pub.dev</span>
+              <span class="project-card-description">A reusable Flutter slider for media content, with touch-friendly thumbnail navigation and fluid drag interactions.</span>
+            </div>
+          </a>
+
+          <a class="project-card oss-project-card" href="https://pub.dev/packages/alice_graphql" target="_blank" rel="noopener noreferrer">
+            <div class="oss-card-image alice-graphql" aria-hidden="true"><span class="oss-card-mark">pub</span></div>
+            <div>
+              <span class="project-card-caption">Alice GraphQL <span class="project-card-arrow" aria-hidden="true">&#8599;</span></span>
+              <span class="project-card-tech">Flutter &middot; Dart &middot; GraphQL</span>
+              <span class="project-card-description">A fork of Alice with GraphQL support, helping app teams inspect API requests and responses during development.</span>
+            </div>
           </a>
         </div>
       </div>
